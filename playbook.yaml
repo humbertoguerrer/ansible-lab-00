@@ -1,3 +1,4 @@
 - hosts: meuservidor
   roles:
     - common
+    - nginx

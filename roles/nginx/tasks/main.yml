@@ -1,0 +1,21 @@
+---
+# tasks file for nginx
+
+- name: Atualizar repositorio
+  become: true
+  apt:
+    update_cache: yes
+
+- name: Instalar nginx
+  become: true
+  apt:
+    name: nginx
+    state: present
+
+- name: Copiar arquivo de configuração nginx
+  become: true
+  copy: src=/home/humberto/labs_devops/ansible_labs/ansible-lab-00/roles/nginx/defaults/default.conf dest=/etc/nginx/conf.d/
+
+- name: Copiar index.html
+  become: true
+  template: src=index.html dest=/var/www/html

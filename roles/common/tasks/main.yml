@@ -22,5 +22,5 @@
 - name: Definir nome da maquina
   become: true
   hostname:
-     name: servidor1
+     name: meuservidor
      use: "systemd"
