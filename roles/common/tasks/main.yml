@@ -1,0 +1,26 @@
+---
+# tasks file for common
+- name: Atualizar repositorio
+  become: true
+  apt:
+    update_cache: yes
+
+- name: Instalar pacotes
+  become: true
+  apt:
+    name: "{{pacotes}}"
+    state: present
+
+- name: Criar usuario
+  become: true
+  user:
+     name: humberto
+     shell: /bin/bash
+     password: "{{senha}}"
+     group: sudo
+
+- name: Definir nome da maquina
+  become: true
+  hostname:
+     name: servidor1
+     use: "systemd"

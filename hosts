@@ -1,0 +1,6 @@
+[meuservidor]
+meuservidor ansible_host=192.168.15.7
+
+[meuservidor:vars]
+ansible_user=vagrant
+ansible_port=22

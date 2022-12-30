@@ -1,0 +1,12 @@
+---
+# vars file for common
+pacotes:
+    - vim
+    - curl
+    - telnet
+    - unzip
+    - net-tools
+    - htop
+    - nmap
+
+senha: sysadmin@123
